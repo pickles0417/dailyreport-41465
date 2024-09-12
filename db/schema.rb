@@ -12,6 +12,17 @@
 
 ActiveRecord::Schema[7.0].define(version: 2024_09_12_065908) do
   create_table "customers", charset: "utf8", force: :cascade do |t|
+    t.string "customer_name", null: false
+    t.integer "category_id", null: false
+    t.string "postcode", null: false
+    t.integer "prefecture_id", null: false
+    t.string "city", null: false
+    t.string "block", null: false
+    t.string "building"
+    t.string "phone_number", null: false
+    t.string "capacity", null: false
+    t.integer "contract_id", null: false
+    t.text "remarks_column"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
