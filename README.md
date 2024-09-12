@@ -16,26 +16,29 @@
 - has_many :customers
 - has_many :dailies
 - has_many :comments
+- has_many :customers
 
 
 ## customers テーブル 顧客情報
 
-| Column           | Type       | Options                        |
-| -----------------| ---------- | ------------------------------ |
-| customer_name    | string     | null: false                    |
-| category_id      | integer    | null: false                    | hash
-| postcode         | string     | null: false                    |
-| prefecture_id    | integer    | null: false                    | hash
-| city             | string     | null: false                    |
-| block            | string     | null: false                    |
-| building         | string     | null: false                    |
-| phone_number     | integer    | null: false                    |
-| capacity         | string     | null: false                    | 定員
-| contract_id      | integer    | null: false                    | hash
-| remarks_column   | text       | null: false                    | 備考欄
+| Column           | Type         | Options                         |
+| -----------------| ----------   | ------------------------------  |
+| customer_name    | string       | null: false                     |
+| category_id      | integer      | null: false                     | hash
+| postcode         | string       | null: false                     |
+| prefecture_id    | integer      | null: false                     | hash
+| city             | string       | null: false                     |
+| block            | string       | null: false                     |
+| building         | string       | null: false                     |
+| phone_number     | integer      | null: false                     |
+| capacity         | string       | null: false                     | 定員
+| contract_id      | integer      | null: false                     | hash
+| remarks_column   | text         | null: false                     | 備考欄
+| user             | references   | null: false, foreign_key: true  |
 
 ### Association
 
+- belongs_to :user
 - has_many :dailies
 
 
