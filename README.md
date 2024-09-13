@@ -34,7 +34,7 @@
 | capacity         | string       | null: false                     | 定員
 | contract_id      | integer      | null: false                     | hash
 | remarks_column   | text         | null: false                     | 備考欄
-| user             | references   | null: false, foreign_key: true  |
+| user             | references   | null: false, foreign_key: true  | usersテーブル作成後必要であれば
 
 ### Association
 
