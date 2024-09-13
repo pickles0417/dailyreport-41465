@@ -7,6 +7,7 @@
 }
 
 .new_customer{
+  font-family: 'Georgia', serif;
   color:  #333333;
   font-size: 30px;
   border: 2px solid  #333333;
@@ -16,6 +17,7 @@
 }
 
 .new_dialy{
+  font-family: 'Georgia', serif;
   color:  #333333;
   font-size: 30px;
   border: 2px solid  #333333;
