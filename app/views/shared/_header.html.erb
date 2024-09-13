@@ -1,16 +1,17 @@
 <header class='top-page-header'>
-  <div class='nav'>
-    <ul class='lists-left'>
+  <div class='search-bar-contents'>
     <%= link_to image_tag("logo_loading.png", class:"corp-icon"), "/" %>
+    <div class="title">顧客管理システム</div>
     <form class="search-form" action="#">
       <input class='input-box' placeholder='顧客名から探す'>
       <button class="search-button">
         <%= image_tag "search-icon.png", class:"search-icon" %>
       </button>
     </form>
-    </ul>
+  </div>
+  <div class='nav'>
     <ul class='lists-right'>
-      <li><%#= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %></li>
+      <%#= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %>
       <li><%= link_to 'ログアウト', "#", class: "logout" %></li>
       <li><%= link_to 'ログイン', "#", class: "login" %></li>
       <li><%= link_to '新規登録', "#", class: "sign-up" %></li>

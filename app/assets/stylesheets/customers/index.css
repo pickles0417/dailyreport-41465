@@ -1,0 +1,25 @@
+.lists-new{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+}
+
+.new_customer{
+  color:  #333333;
+  font-size: 30px;
+  border: 2px solid  #333333;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.new_dialy{
+  color:  #333333;
+  font-size: 30px;
+  border: 2px solid  #333333;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}

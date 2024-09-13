@@ -17,9 +17,14 @@
 
 .corp-icon {
   width: 10vw;
-  margin-right: 10vw;
+  margin-right: 30px;
 }
 
+.title{
+  white-space: nowrap;
+  font-size: 30px;
+  margin-right: 60px;
+}
 .search-form {
   width: 65vw;
   height: 5vh;
@@ -37,7 +42,7 @@
   width: 5vh;
   border: 0;
   cursor: pointer;
-  background-color: #3ccace;
+  background-color: #333333;
   padding: 8px;
 }
 
@@ -51,7 +56,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1vh 0;
+  margin-left: 700px;
 }
 
 .lists-right {
@@ -69,7 +74,10 @@
 
 .logout {
   text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
   color: #333333;
+  padding: 10px;
 }
 
 .login {
@@ -77,9 +85,13 @@
   line-height: 32px;
   margin-right: 3vw;
   color: #333333;
+  padding: 10px;
 }
 
 .sign-up {
   text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
   color: #333333;
+  padding: 10px;
 }
