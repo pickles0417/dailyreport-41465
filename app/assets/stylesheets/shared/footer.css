@@ -13,23 +13,15 @@
   text-align: center;
 }
 
-.footer-contents {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5vh;
-}
-
-.furima-details {
-  margin: 0 4vw;
-}
-
 .footer-content-head {
+  font-family: 'Georgia', serif;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .footer-link {
+  font-family: 'Georgia', serif;
   color: #FFF;
   font-size: 12px;
   line-height: 30px;
@@ -41,5 +33,7 @@
 }
 
 .footer>p {
+  margin-top: 10px;
+  font-family: 'Georgia', serif;
   font-size: 14px;
 }
