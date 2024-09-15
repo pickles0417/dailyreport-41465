@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="MsHb9sZ3VHxcTFvkj8P2" name="ページ1">
-        <mxGraphModel dx="1957" dy="942" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1671" dy="725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -28,7 +28,7 @@
                 <mxCell id="21" value="text&#10;&#10;user_id&#10;customer_id&#10;daily_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=15;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="20" vertex="1">
                     <mxGeometry y="30" width="160" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="dailies" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=15;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                <mxCell id="22" value="daily" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=15;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="530" y="685" width="160" height="265" as="geometry"/>
                 </mxCell>
                 <mxCell id="24" value="meet_year&#10;meet_month&#10;meet_date&#10;&#10;manager_name&#10;meal_id&#10;report&#10;&#10;user_id&#10;customer_id&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=15;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#FFFFFF;" parent="22" vertex="1">
@@ -115,16 +115,16 @@
                 <mxCell id="57" style="edgeStyle=none;html=1;exitX=0;exitY=0;exitDx=40;exitDy=21;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=21;entryPerimeter=0;fontSize=15;" parent="1" source="49" target="49" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="58" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="58" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="210" y="200" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="59" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="59" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="210" y="265" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="60" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;belongs to user&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="60" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;belongs to user&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="155" y="345" width="130" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value="has many customers" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=15;" vertex="1" parent="1">
+                <mxCell id="61" value="has many customers" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=15;" parent="1" vertex="1">
                     <mxGeometry x="150" y="165" width="160" height="30" as="geometry"/>
                 </mxCell>
             </root>
