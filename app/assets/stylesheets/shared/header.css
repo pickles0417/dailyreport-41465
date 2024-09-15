@@ -70,11 +70,12 @@
   display: flex;
 }
 
-.user-nickname {
+.user-name {
+  font-family: 'Georgia', serif;
   text-decoration: none;
-  margin-right: 3vw;
   color: #333333;
   font-weight: bold;
+  margin-left: 3px;
 }
 
 .logout {
@@ -84,6 +85,7 @@
   margin-right: 3vw;
   color: #333333;
   padding: 10px;
+  margin-left: 3vw;
 }
 
 .login {
