@@ -5,6 +5,14 @@ class Customer < ApplicationRecord
   belongs_to :prefecture
   belongs_to :contract
 
+  def self.search(search)
+    if search != ""
+      Customer.where('customer_name LIKE(?)', "%#{search}%")
+    else
+      Customer.all
+    end
+  end
+
   with_options presence: true do
 
     validates :customer_name

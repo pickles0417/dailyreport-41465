@@ -21,6 +21,10 @@ class CustomersController < ApplicationController
   def show
   end
 
+  def search
+    @customer = Customer.search(params[:keyword])
+  end
+
   def edit
   end
 
