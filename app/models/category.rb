@@ -1,4 +1,4 @@
-class Category < ApplicationRecor
+class Category < ActiveHash::Base
   self.data = [
     { id: 0, name: '---' },
     { id: 1, name: '特別養護老人ホーム' },
