@@ -12,7 +12,7 @@ class Customer < ApplicationRecord
     validates :city
     validates :block
     validates :phone_number, format: { with: /\A\d{10,11}\z/ }
-    validates :capacity
+    validates :capacity, numericality: { only_integer: true }
   end
 
   with_options numericality: { other_than: 0 , message: "can't be blank"} do
