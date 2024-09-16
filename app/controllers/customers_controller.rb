@@ -1,4 +1,5 @@
 class CustomersController < ApplicationController
+  before_action :authenticate_user!, only: :new
   def index
     @customer = Customer.all.order("created_at DESC")
   end
@@ -14,6 +15,20 @@ class CustomersController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @customer = Customer.find(params[:id])
+  end
+
+  def edit
+    @customer = Customer.find(params[:id])
+  end
+
+  def update
+    customer = Customer.find(params[:id])
+    customer.update(customer_params)
+    redirect_to root_path
   end
 
   private
