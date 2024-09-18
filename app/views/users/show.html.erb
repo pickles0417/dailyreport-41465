@@ -1,0 +1,24 @@
+<%= render "shared/second_header"%>
+<div class="user-title">マイページ</div>
+
+
+<div class="user-show">
+  <table class="user-detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-user">名前</th>
+          <td class="detail-value"><%= "#{@user.last_name} #{@user.first_name}" %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">所属</th>
+          <td class="detail-value"><%= @user.office_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">メールアドレス</th>
+          <td class="detail-value"><%= @user.email %></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+  <%= render "shared/footer" %>

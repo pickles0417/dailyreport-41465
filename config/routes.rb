@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    resources :dailies, only: :create
   end
+  resources :users, only: :show
 end
