@@ -1,6 +1,9 @@
 class Customer < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
 
+  has_many :dailies
+  belongs_to :user
+  
   belongs_to :category
   belongs_to :prefecture
   belongs_to :contract

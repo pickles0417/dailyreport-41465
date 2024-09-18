@@ -1,10 +1,9 @@
 class Daily < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-
-  belongs_to :user
   belongs_to :customer
+  belongs_to :user
 
-  belongs_to :meal_id
+  belongs_to :meal
 
   with_options presence: true do
     validates :meet_year,numericality: { only_integer: true }
