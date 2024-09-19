@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_17_062500) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_17_173345) do
   create_table "customers", charset: "utf8", force: :cascade do |t|
     t.string "customer_name", null: false
     t.integer "category_id", null: false
@@ -25,6 +25,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_17_062500) do
     t.text "remarks_column"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
   create_table "dailies", charset: "utf8", force: :cascade do |t|

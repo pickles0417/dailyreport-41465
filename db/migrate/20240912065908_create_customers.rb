@@ -12,6 +12,7 @@ class CreateCustomers < ActiveRecord::Migration[7.0]
       t.string :capacity,       null: false
       t.integer :contract_id,   null: false
       t.text :remarks_column
+
       t.timestamps
     end
   end
