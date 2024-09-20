@@ -1,0 +1,57 @@
+
+<%= render "shared/second_header" %>
+<div class="new-title">顧客登録フォーム</div>
+<%= form_with model: @customer, local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
+<div class="Form">
+  <div class="Form-Item">
+    <p class="Form-Item-Label">
+      <span class="Form-Item-Label-Required">必須</span>施設名
+    </p>
+    <%= f.text_field :'customer_name', class:"Form-Item-Input", id:"customer_name", placeholder:"例）デイサービス○○" %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>種類</p>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"category"}) %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>入居定員</p>
+    <%= f.text_field :'capacity', class:"Form-Item-Input", id:"capacity", placeholder:"例）20" %>
+    <span class = cap>名</span>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>顧客状況</p>
+    <%= f.collection_select(:contract_id, Contract.all, :id, :name, {}, {class:"select-box", id:"contract"}) %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>郵便番号</p>
+    <%= f.text_field :'postcode', class:"Form-Item-Input", id:"postal-code", placeholder:"例）123-4567", maxlength:"8" %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>都道府県</p>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>市区町村</p>
+    <%= f.text_field :city, class:"Form-Item-Input", id:"city", placeholder:"例）大阪市中央区"%>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>番地</p>
+    <%= f.text_field :'block', class:"Form-Item-Input", id:"addresses", placeholder:"例）土井1-1-1"%>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">任意</span>建物名</p>
+    <%= f.text_field :'building', class:"Form-Item-Input", id:"building", placeholder:"例）土井ビル103"%>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>施設電話番号</p>
+    <%= f.text_field :'phone_number', class:"Form-Item-Input", id:"phone-number", placeholder:"例）09012345678",maxlength:"11"%>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">任意</span>備考欄</p>
+    <%= f.text_area :'remarks_column', class:"Form-Item-Input", id:"remarks_column", placeholder:"例）2024年から取引開始" %>
+  </div>
+  <%= f.submit "登録する" ,class:"Form-Btn" %>
+</div>
+<% end %>
+<%= render "shared/footer" %>
