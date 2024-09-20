@@ -6,9 +6,9 @@ class Daily < ApplicationRecord
   belongs_to :meal
 
   with_options presence: true do
-    validates :meet_year,numericality: { only_integer: true }
-    validates :meet_month,numericality: { only_integer: true }
-    validates :meet_day,numericality: { only_integer: true }
+    validates :meet_year
+    validates :meet_month
+    validates :meet_day
     validates :text
   end
 
