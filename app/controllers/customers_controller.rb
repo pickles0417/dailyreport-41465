@@ -20,7 +20,6 @@ class CustomersController < ApplicationController
 
   def show
     @daily = Daily.new
-    @dailies = @customer.dailies.includes(:user)
   end
 
   def search
@@ -34,7 +33,7 @@ class CustomersController < ApplicationController
     if @customer.update(customer_params)
       redirect_to @customer
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 

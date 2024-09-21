@@ -15,6 +15,15 @@
 -
 
 # 機能一覧
+
+| Column              | Type   | Options                   |
+| ------------------  | ------ | ------------------------- |
+| last_name           | string | null: false               |
+| first_name          | string | null: false               |
+| password            | string | null: false               |
+| email               | string | null: false, unique: true |
+| office_name         | string | null: false               |
+| birthday            | date   | null: false               |
 - ユーザー管理機能
 
 - 顧客情報一覧機能
@@ -34,13 +43,19 @@
 -
 
 # 開発環境
--
+
+- windows11
+- vscode
+- Ubuntu 22.04.4
+- rails 7.0.0
+- mysql8
 
 # ローカルでの動作方法
 -
 
 # 工夫した点
 -
+
 
 
 # テーブル設計

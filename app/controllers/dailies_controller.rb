@@ -1,6 +1,15 @@
 class DailiesController < ApplicationController
   before_action :authenticate_user!, only: [:create]
+  def index
+    @customer = Customer.find(params[:customer_id])
+    @dailies = @customer.dailies
+  end
 
+  def new
+    @customer = Customer.find(params[:customer_id])
+    @daily = Daily.new
+  end
+  
   def create
     @daily = Daily.create(daily_params)
     redirect_to "/customers/#{@daily.customer.id}"
