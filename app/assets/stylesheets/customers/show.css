@@ -1,0 +1,145 @@
+
+.show-title{
+  font-family: "游明朝", serif;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.show-customer-menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.customer-edit-btn{
+  text-align: center;
+  font-family: "游明朝", serif;
+  color: white;
+  font-size: 20px;
+  padding: 7px 14px;
+  text-decoration: none;
+  background-color: #5bc8ac;
+  border-radius: 6px;
+}
+
+
+.detail-table {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.detail-customer {
+  height: 80px;
+  width: 20%;
+  background-color: #eee;
+  border: 2px solid #dedede;
+  font-size: 15px;
+  text-align: center;
+  font-family: "游明朝", serif;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 2px solid #dedede;
+  font-size: 15px;
+}
+
+.daily-title{
+  font-family: "游明朝", serif;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.daily-form{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+
+.daily-index-title{
+  font-family: "游明朝", serif;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.daily-index-item{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+
+table{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  font-family: "游明朝", serif;
+}
+
+table th:first-child{
+  border-radius: 5px 0 0 0;
+}
+
+table th:last-child{
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid #3c6690;
+}
+
+table th{
+  text-align: center;
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+  border-left: 1px solid #3c6690;
+  border-top: 1px solid #3c6690;
+  border-bottom: 1px solid #3c6690;
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td{
+  text-align: center;
+  border-left: 1px solid #a8b7c5;
+  border-bottom: 1px solid #a8b7c5;
+  border-top:none;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td:last-child{
+  border-right: 1px solid #a8b7c5;
+}
+
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+
+  .form-item-input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 48px;
+    flex: 1;
+    width: 100%;
+    max-width: 410px;
+    background: #eaedf2;
+    font-size: 18px;
+  }
+

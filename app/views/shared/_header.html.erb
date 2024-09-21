@@ -2,24 +2,22 @@
   <div class='search-bar-contents'>
     <%= link_to image_tag("logo_loading.png", class:"corp-icon"), "/" %>
     <div class="title">顧客管理システム</div>
-    <form class="search-form" action="#">
-      <input class='input-box' placeholder='顧客名から探す'>
-      <button class="search-button">
-        <%= image_tag "search-icon.png", class:"search-icon" %>
-      </button>
-    </form>
+    <%= form_with(url: search_customers_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder:"施設名から検索", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+    <% end %>
   </div>
   <div class='nav'>
     <ul class='lists-right'>
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
-          <li><%= link_to current_user.last_name, "/users/#{current_user.id}", class: "user-name" %></li>
-          <li><%= link_to current_user.first_name, "/users/#{current_user.id}", class: "user-name" %></li>
+          <li><%= link_to "#{current_user.last_name}#{current_user.first_name}", "/users/#{current_user.id}", class: "user-name" %></li>
+          <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "mypage" %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete}, class: "logout" %></li>
         </div>
       <% else %>
         <div class="grid-6">
-          <li><%= link_to "ログイン", new_user_session_path, class: "login" %> 
+          <li><%= link_to "ログイン", new_user_session_path, class: "login" %>
           <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
         </div>
       <% end %>

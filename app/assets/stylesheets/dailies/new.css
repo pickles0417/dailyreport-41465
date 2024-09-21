@@ -1,0 +1,19 @@
+.daily-new-item{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+
+.daily-new-btn{
+text-align: center;
+font-family: "游明朝", serif;
+color: white;
+font-size: 20px;
+padding: 10px;
+width: 20vh;
+text-decoration: none;
+background-color: #5bc8ac;
+border-radius: 6px;
+font-weight: bold;
+}

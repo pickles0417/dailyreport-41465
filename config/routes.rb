@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    resources :dailies, only: [:index, :new, :create ]
+    resources :dailies, only: [:index, :new, :create , :edit, :update]
   end
   resources :users, only: :show
 end

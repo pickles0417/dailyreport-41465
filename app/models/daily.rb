@@ -15,5 +15,4 @@ class Daily < ApplicationRecord
   with_options numericality: { other_than: 0 } do
     validates :meal_id
   end
-
 end

@@ -1,13 +1,12 @@
 <%= render "shared/header" %>
-<div class="index-title">顧客一覧</div>
+<div class="search-title">検索結果</div>
 <div class="flex-table">
   <div class="flex-row">
     <div class="flex-cell header">施設名</div>
     <div class="flex-cell header">種類</div>
     <div class="flex-cell header">施設所在地</div>
     <div class="flex-cell header">入居定員</div>
-    <div class="flex-cell header">顧客情報</div>
-    <div class="flex-cell header">商談履歴</div>
+    <div class="flex-cell header"></div>
   </div>
   <% @customer.each do |customer| %>
   <div class="flex-row">
@@ -17,18 +16,8 @@
     <div class="flex-cell"><%= customer.capacity %><span>名</span></div>
     <div class="flex-cell"><%= link_to(customer_path(customer.id), class: 'customer-show-btn') do %>
       <span class='customer-show-text'>詳細</span><% end %></div>
-  <div class="flex-cell"><%= link_to(customer_dailies_path(customer.id), class: 'daily-show-btn') do %>
-      <span class='customer-show-text'>詳細</span><% end %></div>
-      </div>
+  </div>
   <% end %>
 </div>
-
-<div class="customer-new-item">
-  <%= link_to(new_customer_path, class: 'customer-new-btn') do %>
-    <span class='customer-new-text'>顧客登録</span>
-  <% end %>
-</div>
-
 
 <%= render "shared/footer" %>
-

@@ -1,0 +1,35 @@
+<%= render "shared/second_header"%>
+
+<div class="daily-title"><%= "#{@customer.customer_name}の日報入力"%></div>
+  <%= form_with(model: [@customer, @daily], method: :post) do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
+<div class="Form">
+  <div class="Form-Item">
+    <p class="Form-Item-Label">
+      <span class="Form-Item-Label-Required">必須</span>商談日(半角数字)
+    </p>
+      <%= f.number_field :meet_year, class:"form-item-input", id:"meet_year", placeholder:"年", min: 2024, max: 2030, required: true %>
+      <%= f.number_field :'meet_month', class:"form-item-input", id:"meet_month", placeholder:"月", min: 1, max: 12, required: true %>
+      <%= f.number_field :'meet_day', class:"form-item-input", id:"meet_day", placeholder:"日", min: 1, max: 31, required: true %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>施設担当者</p>
+    <%= f.text_field :'manager_name', class:"Form-Item-Input", id:"manager_name", placeholder:"例）山本" %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>食事内容</p>
+    <%= f.collection_select(:meal_id, Meal.all, :id, :name, {}, {class:"select-box", id:"meal"}) %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">任意</span>食事業者</p>
+    <%= f.text_field :'competitor', class:"Form-Item-Input", id:"competitor", placeholder:"例）タイヘイ" %>
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>商談内容</p>
+    <%= f.text_area :'text', class:"Form-Item-Input", id:"text", placeholder: "例）今月中に契約締結し、来月から導入開始予定" %>
+  </div>
+  <%= f.submit "登録する" ,class:"Form-Btn" %>
+</div>
+<% end %>
+
+<%= render "shared/footer" %>

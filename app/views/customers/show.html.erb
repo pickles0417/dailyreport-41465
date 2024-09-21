@@ -1,0 +1,48 @@
+<%= render "shared/second_header"%>
+<div class="show-title"><%="#{@customer.customer_name}の顧客詳細"%></div>
+
+<div class="item-show">
+  <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-customer">施設名</th>
+          <td class="detail-value"><%= @customer.customer_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-customer">種類</th>
+          <td class="detail-value"><%= @customer.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-customer">顧客区分</th>
+          <td class="detail-value"><%= @customer.contract.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-customer">施設所在地</th>
+          <td class="detail-value"><%= @customer.postcode %> <%= @customer.prefecture.name%><%= @customer.block %><%= @customer.building %> </td>
+        </tr>
+        <tr>
+          <th class="detail-customer">電話番号</th>
+          <td class="detail-value"><%= @customer.phone_number %></td>
+        </tr>
+        <tr>
+          <th class="detail-customer">定員</th>
+          <td class="detail-value"><%= @customer.capacity %>名</td>
+        </tr>
+        <tr>
+          <th class="detail-customer">備考</th>
+          <td class="detail-value"><%= @customer.remarks_column %></td>
+        </tr>
+        <tr>
+          <th class="detail-customer">操作</th>
+          <td class="detail-value">
+          <%= link_to(edit_customer_path(@customer.id), class: 'customer-edit-btn') do %>
+          <span class='customer-edit-text'>編集</span>
+          <% end %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<%= render "shared/footer" %>
+

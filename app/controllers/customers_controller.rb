@@ -2,7 +2,7 @@ class CustomersController < ApplicationController
   before_action :authenticate_user!, only: [:show, :edit, :update, :destroy, :new]
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
   def index
-    @customer = Customer.includes(:user).order("created_at DESC")
+    @customer = Customer.includes(:user).order('created_at DESC')
   end
 
   def new
@@ -45,7 +45,8 @@ class CustomersController < ApplicationController
   private
 
   def customer_params
-    params.require(:customer).permit(:customer_name, :category_id, :postcode, :prefecture_id, :city, :block, :building, :phone_number, :capacity, :contract_id, :remarks_column).merge(user_id: current_user.id)
+    params.require(:customer).permit(:customer_name, :category_id, :postcode, :prefecture_id, :city, :block, :building,
+                                     :phone_number, :capacity, :contract_id, :remarks_column).merge(user_id: current_user.id)
   end
 
   def set_customer
