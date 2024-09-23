@@ -4,7 +4,6 @@
   margin-bottom: 100px;
 }
 
-
 .daily-new-btn{
 text-align: center;
 font-family: "游明朝", serif;
@@ -16,4 +15,18 @@ text-decoration: none;
 background-color: #5bc8ac;
 border-radius: 6px;
 font-weight: bold;
+}
+
+.form-item-input {
+  margin-right: 30px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
 }

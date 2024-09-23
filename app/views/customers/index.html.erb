@@ -1,27 +1,31 @@
 <%= render "shared/header" %>
-<div class="index-title">顧客一覧</div>
-<div class="flex-table">
-  <div class="flex-row">
-    <div class="flex-cell header">施設名</div>
-    <div class="flex-cell header">種類</div>
-    <div class="flex-cell header">施設所在地</div>
-    <div class="flex-cell header">入居定員</div>
-    <div class="flex-cell header">顧客情報</div>
-    <div class="flex-cell header">商談履歴</div>
+<% if @customer.nil? || @customer.empty? %>
+  <div class="customer-none-title"><%= "現在、顧客情報はありません。"%></div>
+<% else %>
+  <div class="index-customer-title">顧客一覧</div>
+  <div class="flex-table">
+    <div class="flex-row">
+      <div class="flex-cell header">施設名</div>
+      <div class="flex-cell header">種類</div>
+      <div class="flex-cell header">施設所在地</div>
+      <div class="flex-cell header">入居定員</div>
+      <div class="flex-cell header">顧客情報</div>
+      <div class="flex-cell header">商談履歴</div>
+    </div>
+    <% @customer.each do |customer| %>
+    <div class="flex-row">
+      <div class="flex-cell"><%= customer.customer_name %></div>
+      <div class="flex-cell"><%= customer.category.name %></div>
+      <div class="flex-cell"><%= customer.prefecture.name %></div>
+      <div class="flex-cell"><%= customer.capacity %><span>名</span></div>
+      <div class="flex-cell"><%= link_to(customer_path(customer.id), class: 'customer-show-btn') do %>
+        <span class='customer-show-text'>詳細</span><% end %></div>
+    <div class="flex-cell"><%= link_to(customer_dailies_path(customer.id), class: 'daily-show-btn') do %>
+        <span class='customer-show-text'>詳細</span><% end %></div>
+        </div>
+    <% end %>
   </div>
-  <% @customer.each do |customer| %>
-  <div class="flex-row">
-    <div class="flex-cell"><%= customer.customer_name %></div>
-    <div class="flex-cell"><%= customer.category.name %></div>
-    <div class="flex-cell"><%= customer.prefecture.name %></div>
-    <div class="flex-cell"><%= customer.capacity %><span>名</span></div>
-    <div class="flex-cell"><%= link_to(customer_path(customer.id), class: 'customer-show-btn') do %>
-      <span class='customer-show-text'>詳細</span><% end %></div>
-  <div class="flex-cell"><%= link_to(customer_dailies_path(customer.id), class: 'daily-show-btn') do %>
-      <span class='customer-show-text'>詳細</span><% end %></div>
-      </div>
-  <% end %>
-</div>
+<% end %>
 
 <div class="customer-new-item">
   <%= link_to(new_customer_path, class: 'customer-new-btn') do %>

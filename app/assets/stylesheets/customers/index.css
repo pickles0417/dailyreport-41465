@@ -1,11 +1,10 @@
-.index-title{
+.index-customer-title{
   display: flex;
   justify-content: center;
   font-size: 30px;
   font-family: "游明朝", serif;
-  margin-top: 40px;
+  margin-top: 20px;
 }
-
 
 .customer-show-btn{
   border-radius: 6px;
@@ -51,8 +50,9 @@
   font-family: "游明朝", serif;
   margin: 100px;
   text-align: center;
-  font-size: 13px;
-  width: auto;
+  font-size: 15px;
+  width: 100%;
+  margin: 100px auto;
 }
 
 .flex-row {
@@ -60,6 +60,9 @@
 }
 
 .flex-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   padding: 1rem;
   border: 1px solid #ddd;

@@ -1,17 +1,22 @@
 <%= render "shared/second_header"%>
-<div class="daily-index-title"><%= "#{@customer.customer_name}の商談履歴"%></div>
-<% @dailies.each do |daily| %>
-<div class ="daily-index-item">
-<ul class="daily-index-list">
-  <li class="daily-list">商談日：<%= "#{daily.meet_year}年#{daily.meet_month}月#{daily.meet_day}日" %></li>
-  <li class="daily-list">営業担当：<%= "#{daily.user.last_name} #{daily.user.first_name}" %></li>
-  <li class="daily-list">所属部署：<%= daily.user.office_name %></li>
-  <li class="daily-list">施設担当者：<%= daily.manager_name %></li>
-  <li class="daily-list">食事内容：<%= daily.meal.name %></li>
-  <li class="daily-list">業者名：<%= daily.competitor %></li>
-  <li class="daily-list">商談内容：<%= daily.text %></li>
-</ul>
-</div>
+
+<% if @dailies.nil? || @dailies.empty? %>
+  <div class="daily-none-title"><%= "現在、#{@customer.customer_name}の商談履歴はありません。"%></div>
+<% else %>
+  <div class="daily-index-title"><%= "#{@customer.customer_name}の商談履歴"%></div>
+  <% @dailies.each do |daily| %>
+  <div class ="daily-index-item">
+  <ul class="daily-index-list">
+    <li class="daily-list">商談日：<%= "#{daily.meet_year}年#{daily.meet_month}月#{daily.meet_day}日" %></li>
+    <li class="daily-list">営業担当：<%= "#{daily.user.last_name} #{daily.user.first_name}" %></li>
+    <li class="daily-list">所属部署：<%= daily.user.office_name %></li>
+    <li class="daily-list">施設担当者：<%= daily.manager_name %></li>
+    <li class="daily-list">食事内容：<%= daily.meal.name %></li>
+    <li class="daily-list">業者名：<%= daily.competitor %></li>
+    <li class="daily-list">商談内容：<%= daily.text %></li>
+  </ul>
+  </div>
+  <% end %>
 <% end %>
 <div class="daily-new-item">
 <%= link_to(new_customer_daily_path(@customer.id), class: 'daily-new-btn') do %>
