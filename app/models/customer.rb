@@ -18,14 +18,14 @@ class Customer < ApplicationRecord
 
   with_options presence: true do
     validates :customer_name
-    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/ }
+    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'はハイフンを含めた半角文字列で入力してください (例：123-4567)' }
     validates :city
     validates :block
-    validates :phone_number, format: { with: /\A\d{10,11}\z/ }
+    validates :phone_number, format: { with: /\A[0-9]{10,11}+\z/, message: 'は10桁以上11桁以内の半角数値で入力してください' }
     validates :capacity, numericality: { only_integer: true }
   end
 
-  with_options numericality: { other_than: 0, message: "can't be blank" } do
+  with_options numericality: { other_than: 0, message: "を選択してください" } do
     validates :category_id
     validates :prefecture_id
     validates :contract_id

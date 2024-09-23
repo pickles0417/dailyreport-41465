@@ -51,7 +51,8 @@
   font-family: "游明朝", serif;
   margin: 100px;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
+  width: auto;
 }
 
 .flex-row {

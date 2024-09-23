@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   margin-bottom: 5vh;
+  font-family: "游明朝", serif;
 }
 
 .error-message {
   font-size: 1.3vw;
   list-style: circle;
   color: rgb(182, 48, 0);
+  font-family: "游明朝", serif;
 }

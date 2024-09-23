@@ -11,8 +11,13 @@ class DailiesController < ApplicationController
   end
 
   def create
-    @daily = Daily.create(daily_params)
-    redirect_to "/customers/#{@daily.customer.id}/dailies"
+    @customer = Customer.find(params[:customer_id])
+    @daily = Daily.new(daily_params)
+    if @daily.save
+      redirect_to "/customers/#{@daily.customer.id}/dailies"
+    else
+      render 'new', status: :unprocessable_entity
+    end
   end
 
   private

@@ -8,7 +8,7 @@
     </h1>
 
   <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render "devise/shared/error_messages", model: f.object %>
 <div class="Form">
   <div class="Form-Item">
     <p class="Form-Item-Label">

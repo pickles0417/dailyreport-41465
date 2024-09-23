@@ -5,3 +5,11 @@
   font-family: "游明朝", serif;
   margin: 20px;
  }
+.login-flash-message{
+  display: flex;
+  justify-content: center;
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+  font-family: "游明朝", serif;
+}
