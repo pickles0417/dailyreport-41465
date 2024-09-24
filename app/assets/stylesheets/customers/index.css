@@ -6,6 +6,15 @@
   margin: 40px;
 }
 
+.customer-none-title{
+  font-family: "游明朝", serif;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin: 100px auto;
+}
+
 .customer-show-btn{
   border-radius: 6px;
   font-size: 15px;
