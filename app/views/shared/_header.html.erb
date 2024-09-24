@@ -3,24 +3,43 @@
     <%= link_to image_tag("logo_loading.png", class:"corp-icon"), "/" %>
     <div class="title">顧客管理システム</div>
     <%= form_with(url: search_customers_path, local: true, method: :get, class: "search-form") do |form| %>
-    <%= form.text_field :keyword, placeholder:"施設名から検索", class: "search-input" %>
-    <%= form.submit "検索", class: "search-btn" %>
+      <%= form.text_field :keyword, placeholder:"施設名から検索", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
     <% end %>
   </div>
-  <div class='nav'>
-    <ul class='lists-right'>
-      <% if user_signed_in? %>
-        <div class="user_nav grid-6">
-          <li><%= link_to "#{current_user.last_name}#{current_user.first_name}", "/users/#{current_user.id}", class: "user-name" %></li>
-          <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "mypage" %></li>
-          <li><%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete}, class: "logout" %></li>
-        </div>
-      <% else %>
-        <div class="grid-6">
-          <li><%= link_to "ログイン", new_user_session_path, class: "login" %>
-          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-        </div>
-      <% end %>
-    </ul>
-  </div>
+
+  <% if user_signed_in? %>
+    <div class="menu-bar">
+      <ul class="menu-elements">
+        <li id="menu1">
+          <div class ="user-name"><%= "#{current_user.last_name}#{current_user.first_name}"%></div>
+          <ul class="menu1-lists hidden" id="menu1-pull-down">
+            <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "mypage" %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete}, class: "logout" %></li>
+          </ul>
+        </li>
+        <li id="menu2">
+          メニュー
+          <ul class="menu2-lists hidden" id="menu2-pull-down">
+            <li><%= link_to(new_customer_path, class: 'customer-new-btn') do %>
+              <span class='customer-new-text'>顧客登録</span>
+              <% end %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <% else %>
+    <div class="menu-bar">
+      <ul class="menu-elements">
+        <li id="menu1">
+          <%= link_to "ログイン", new_user_session_path, class: "login" %>
+        </li>
+        <li id="menu2">
+          <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
 </header>
+
