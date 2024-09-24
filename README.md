@@ -19,7 +19,7 @@
 - 顧客詳細 https://gyazo.com/2eeaa0d924dfedfc91ce28dc3d12a006
 - 顧客検索機能 https://gyazo.com/79cf1d0b1ca100b4215817da4af181c7
 - 顧客編集 https://gyazo.com/e31463705b3931e2c201dc17e6041cc1
-- 顧客に紐づく商談詳細 https://gyazo.com/7b65f2a36b742ef3552ac1fd3d8c4143
+- 顧客に紐づく商談履歴 https://gyazo.com/7b65f2a36b742ef3552ac1fd3d8c4143
 - 商談登録 https://gyazo.com/fc2518b613c33ef91c7ce458a013025b
 
 # 機能一覧
@@ -59,7 +59,8 @@
 -
 
 # 工夫した点
--
+- 利用時のシュチュエーションをイメージし、使いやすさシンプルさに重点を置き、画面遷移の工夫をしました。
+
 
 
 
@@ -101,6 +102,7 @@
 
 ### Association
 
+- belongs_to :user
 - has_many :dailies
 
 
@@ -122,20 +124,6 @@
 
 - belongs_to :user
 - belongs_to :customer
-- has many  :comments
-
-## comments テーブル コメント情報
-
-| Column        | Type         | Options                        |
-| --------------| ------------ | ------------------------------ |
-| text          | text         | null: false                    |
-| user          | references   | null: false, foreign_key: true |
-| customer      | references   | null: false, foreign_key: true |
-| daily         | references   | null: false, foreign_key: true |
 
 
-### Association
 
-- belongs_to :user
-- belongs_to :customer
-- belongs_to :daily
