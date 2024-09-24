@@ -14,7 +14,7 @@
         <li id="menu1">
           <div class ="user-name"><%= "#{current_user.last_name}#{current_user.first_name}"%></div>
           <ul class="menu1-lists hidden" id="menu1-pull-down">
-            <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "mypage" %></li>
+            <li><%= link_to "マイページ", "/users/#{current_user.id}", class: "my-page" %></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete}, class: "logout" %></li>
           </ul>
         </li>
