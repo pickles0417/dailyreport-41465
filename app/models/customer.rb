@@ -23,6 +23,7 @@ class Customer < ApplicationRecord
     validates :block
     validates :phone_number, format: { with: /\A[0-9]{10,11}+\z/, message: 'は10桁以上11桁以内の半角数値で入力してください' }
     validates :capacity, numericality: { only_integer: true }
+    validates :user_id, {presence: true}
   end
 
   with_options numericality: { other_than: 0, message: "を選択してください" } do

@@ -1,9 +1,9 @@
 .index-customer-title{
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "游明朝", serif;
-  margin-top: 20px;
+  margin: 40px;
 }
 
 .customer-show-btn{
@@ -51,7 +51,7 @@
   margin: 100px;
   text-align: center;
   font-size: 15px;
-  width: 100%;
+  width: 80%;
   margin: 100px auto;
 }
 

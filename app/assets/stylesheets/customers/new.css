@@ -1,13 +1,13 @@
 .new-title{
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "游明朝", serif;
-  margin: 20px;
+  margin: 40px;
 }
 
 .Form {
-  margin:100px auto;
+  margin: 0 auto;
   max-width: 720px;
 }
 
@@ -107,6 +107,7 @@
   font-family: "游明朝", serif;
   border: none;
   cursor: pointer;
+  margin-bottom: 100px;
 }
 
 .cap{

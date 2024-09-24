@@ -1,9 +1,9 @@
 .session-title{
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "游明朝", serif;
-  margin: 20px;
+  margin: 40px;
  }
 .login-flash-message{
   display: flex;
