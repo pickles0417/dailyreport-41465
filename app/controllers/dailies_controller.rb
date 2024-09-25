@@ -1,9 +1,9 @@
 class DailiesController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new,  :create]
+  before_action :authenticate_user!, only: [:index, :new, :create]
   before_action :set_daily, only: [:index, :new]
 
   def index
-    @dailies = @customer.dailies.includes(:user).order("created_at DESC")
+    @dailies = @customer.dailies.includes(:user).order('created_at DESC')
   end
 
   def new

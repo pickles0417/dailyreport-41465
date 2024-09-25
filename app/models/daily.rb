@@ -12,7 +12,7 @@ class Daily < ApplicationRecord
     validates :text
   end
 
-  with_options numericality: { other_than: 0, message: "を選択してください"} do
+  with_options numericality: { other_than: 0, message: 'を選択してください' } do
     validates :meal_id
   end
 end
