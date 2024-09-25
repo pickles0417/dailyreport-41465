@@ -48,13 +48,19 @@
 - 複数カラム＋条件検索機能
 
 # 開発環境
-フロントエンド
-- windows11
-- vscode
-- Ubuntu 22.04.4
-- rails 7.0.0
-バックエンド
-- mysql8
+- OS
+windows11
+- テキストエディタ
+vscode
+- フレームワーク
+rails 7.0.0
+- Languages
+Ruby
+HTML
+CSS
+JavaScript
+- バックエンド
+mysql8
 
 # ローカルでの動作方法
 % git clone https://github.com/pickles0417/dailyreport-41465.git
