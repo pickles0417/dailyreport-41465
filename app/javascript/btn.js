@@ -69,3 +69,36 @@ window.addEventListener('turbo:load', function(){
       this.removeAttribute("style");
   });
 });
+
+window.addEventListener('turbo:load', function(){
+  const footerGuide = document.getElementById("footer-guide");
+
+  footerGuide.addEventListener('mouseover', function() {
+    footerGuide.style.color = '#5bc8ac';
+  });
+  footerGuide.addEventListener('mouseout', function() {
+    footerGuide.style.color = '';
+  });
+});
+
+window.addEventListener('turbo:load', function(){
+  const footerGuideLine = document.getElementById("footer-guideline");
+
+  footerGuideLine.addEventListener('mouseover', function() {
+    footerGuideLine.style.color = '#5bc8ac';
+  });
+  footerGuideLine.addEventListener('mouseout', function() {
+    footerGuideLine.style.color = '';
+  });
+});
+
+window.addEventListener('turbo:load', function(){
+  const footerNews = document.getElementById("footer-news");
+
+  footerNews.addEventListener('mouseover', function() {
+    footerNews.style.color = '#5bc8ac';
+  });
+  footerNews.addEventListener('mouseout', function() {
+    footerNews.style.color = '';
+  });
+});
