@@ -52,7 +52,7 @@
     <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">任意</span>備考欄</p>
     <%= f.text_area :'remarks_column', class:"Form-Item-Input", id:"remarks_column", placeholder:"例）2024年から取引開始" %>
   </div>
-  <%= f.submit "編集する" ,class:"Form-Btn" %>
+  <%= f.submit "編集する", class:"Form-Btn", id:"form-button"%>
 </div>
 <% end %>
 <%= render "shared/footer" %>

@@ -19,7 +19,7 @@
   <% end %>
 <% end %>
 <div class="daily-new-item">
-<%= link_to(new_customer_daily_path(@customer.id), class: 'daily-new-btn') do %>
+<%= link_to(new_customer_daily_path(@customer.id), class: 'daily-new-btn', id: "daily-new-button") do %>
       <span class='daily-new-text'>商談入力</span><% end %>
 </div>
 <%= render "shared/footer" %>

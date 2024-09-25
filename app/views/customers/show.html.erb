@@ -35,7 +35,7 @@
         <tr>
           <th class="detail-customer">操作</th>
           <td class="detail-value">
-          <%= link_to(edit_customer_path(@customer.id), class: 'customer-edit-btn') do %>
+          <%= link_to(edit_customer_path(@customer.id), class: 'customer-edit-btn', id:"customer-edit-button") do %>
           <span class='customer-edit-text'>編集</span>
           <% end %>
           </td>
