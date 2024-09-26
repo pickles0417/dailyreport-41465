@@ -2,17 +2,17 @@
 - 営業日報管理
 
 # アプリケーション概要
-- 顧客情報と商談記録の作成・管理ができます。
+- 営業先の顧客情報と商談記録の作成・管理ができます。
 
 # URL
 - https://dailyreport-41465.onrender.com
 
 # テスト用アカウント
-- ・メール：test1@test.com
-- ・パスワード：test1111
+- メール：test1@test.com
+- パスワード：test1111
 
 # 利用方法
-- ユーザー新規登録 https://gyazo.com/667398e3b8c77b0608ea6b298ccb7682
+-  ![ユーザー新規登録](https://gyazo.com/667398e3b8c77b0608ea6b298ccb7682 "ユーザー新規登録")
 - ユーザーログイン https://gyazo.com/c9a33ec505c1ecaeaebe67642bd3c641
 - ユーザーマイページ https://gyazo.com/362f9cadaf290c37e5b40771534a9182
 - 顧客登録 https://gyazo.com/7996cd66af2b1b6e8585ecf5dd1b7214
@@ -48,19 +48,15 @@
 - 複数カラム＋条件検索機能
 
 # 開発環境
-- OS
-windows11
-- テキストエディタ
-vscode
-- フレームワーク
-rails 7.0.0
-- Languages
-Ruby
-HTML
-CSS
-JavaScript
+- windows11
+- vscode
+- rails 7.0.0
+- Ruby
+- HTML
+- CSS
+- JavaScript
 - バックエンド
-mysql8
+- MySQL 8.0 
 
 # ローカルでの動作方法
 % git clone https://github.com/pickles0417/dailyreport-41465.git
