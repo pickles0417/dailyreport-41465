@@ -6,7 +6,8 @@
     <div class="flex-cell header">種類</div>
     <div class="flex-cell header">施設所在地</div>
     <div class="flex-cell header">入居定員</div>
-    <div class="flex-cell header"></div>
+    <div class="flex-cell header">顧客情報</div>
+    <div class="flex-cell header">商談履歴</div>
   </div>
   <% @customer.each do |customer| %>
   <div class="flex-row">
@@ -15,6 +16,8 @@
     <div class="flex-cell"><%= customer.prefecture.name %></div>
     <div class="flex-cell"><%= customer.capacity %><span>名</span></div>
     <div class="flex-cell"><%= link_to(customer_path(customer.id), class: 'customer-show-btn') do %>
+      <span class='customer-show-text'>詳細</span><% end %></div>
+    <div class="flex-cell"><%= link_to(customer_dailies_path(customer.id), class: 'daily-show-btn') do %>
       <span class='customer-show-text'>詳細</span><% end %></div>
   </div>
   <% end %>
