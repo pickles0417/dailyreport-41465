@@ -12,7 +12,8 @@
 - パスワード：test1111
 
 # 利用方法
--  ![ユーザー新規登録](https://gyazo.com/667398e3b8c77b0608ea6b298ccb7682 "ユーザー新規登録")
+- ユーザー新規登録
+<iframe width="560" height="315" src="https://gyazo.com/667398e3b8c77b0608ea6b298ccb7682" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 - ユーザーログイン https://gyazo.com/c9a33ec505c1ecaeaebe67642bd3c641
 - ユーザーマイページ https://gyazo.com/362f9cadaf290c37e5b40771534a9182
 - 顧客登録 https://gyazo.com/7996cd66af2b1b6e8585ecf5dd1b7214
@@ -36,7 +37,7 @@
 | 商談登録            | 〇             | ✕                 |
 
 # アプリケーションを作成した背景
-- 前職で営業をしていた際、顧客や商談の情報などをメモ帳やエクセル、外部サイトを使って各個人で管理していました。
+前職で営業をしていた際、顧客や商談の情報などをメモ帳やエクセル、外部サイトを使って各個人で管理していました。
 営業活動の効率が悪い、会社として顧客の貴重な情報を全体で管理できていない点、紙ベースだと情報漏洩になり兼ねないことが課題だと考えました。
 上記の課題を踏まえ、社員であればいつでも作成・閲覧ができること、顧客ごとの商談経緯を可視化、効率化、
 社内ツールとして全社統一できることを考えこのようなアプリケーションを作成しました。
@@ -55,8 +56,7 @@
 - HTML
 - CSS
 - JavaScript
-- バックエンド
-- MySQL 8.0 
+- MySQL 8.0
 
 # ローカルでの動作方法
 % git clone https://github.com/pickles0417/dailyreport-41465.git
