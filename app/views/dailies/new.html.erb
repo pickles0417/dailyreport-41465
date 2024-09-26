@@ -1,4 +1,4 @@
-<%= render "shared/second_header"%>
+<%= render "shared/form_header"%>
 
 <div class="daily-new-title"><%= "#{@customer.customer_name}の日報入力"%></div>
   <%= form_with(model: [@customer, @daily], method: :post) do |f| %>

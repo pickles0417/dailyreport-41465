@@ -48,16 +48,6 @@ window.addEventListener('turbo:load', function(){
   });
 });
 
-window.addEventListener('turbo:load', function(){
-  const dailyNewButton = document.getElementById("daily-new-button");
-
-  dailyNewButton.addEventListener('mouseover', function() {
-      this.setAttribute("style", "background-color: #008080;");
-  });
-  dailyNewButton.addEventListener('mouseout', function() {
-      this.removeAttribute("style");
-  });
-});
 
 window.addEventListener('turbo:load', function(){
   const searchButton = document.getElementById("search-button");

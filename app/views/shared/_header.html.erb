@@ -1,7 +1,7 @@
 <header class='top-page-header'>
   <div class='search-bar-contents'>
     <%= link_to image_tag("logo_loading.png", class:"corp-icon"), "/" %>
-    <div class="title">顧客管理システム</div>
+    <div class="title">営業日報管理システム</div>
     <%= form_with(url: search_customers_path, local: true, method: :get, class: "search-form") do |form| %>
       <%= form.text_field :keyword, placeholder:"施設名から検索", class: "search-input" %>
       <%= form.submit "検索", class: "search-btn", id:"search-button" %>

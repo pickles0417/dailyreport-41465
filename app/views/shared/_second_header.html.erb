@@ -1,3 +1,17 @@
 <header class='second-header'>
   <%= link_to image_tag("logo_loading.png", class:"second-logo"), "/" %>
+
+      <div class="menu-bar">
+      <ul class="menu-elements">
+        <li id="menu3">
+          メニュー
+          <ul class="menu3-lists hidden" id="menu3-pull-down">
+            <li><%= link_to(new_customer_daily_path(@customer.id), class: 'daily-new-btn', id:"daily-new-button") do %>
+              <span class='daily-new-text'>商談入力</span>
+              <% end %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 </header>
