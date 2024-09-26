@@ -13,7 +13,7 @@
 
 # 利用方法
 - ユーザー新規登録
-<iframe width="560" height="315" src="https://gyazo.com/667398e3b8c77b0608ea6b298ccb7682" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+- https://github.com/user-attachments/assets/d8f0d584-fa82-41a7-bfbd-3e2496e06333
 - ユーザーログイン https://gyazo.com/c9a33ec505c1ecaeaebe67642bd3c641
 - ユーザーマイページ https://gyazo.com/362f9cadaf290c37e5b40771534a9182
 - 顧客登録 https://gyazo.com/7996cd66af2b1b6e8585ecf5dd1b7214
