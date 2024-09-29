@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy, :new]
+  before_action :authenticate_user!, except: [:index]
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
   def index
     @customer = Customer.includes(:user).order('created_at DESC')
