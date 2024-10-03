@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :customer do
     association :user
+
     customer_name { Faker::Name.name}
     category_id {Faker::Number.between(from: 1, to: 6)}
     contract_id {Faker::Number.between(from: 1, to: 2)}
