@@ -11,6 +11,7 @@ class User < ApplicationRecord
     validates_format_of :password, with: PASSWORD_REGEX, message: 'は英数字の混合である必要があります'
     validates :last_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
     validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
+    validates :office_name
     validates :birthday
   end
 end
