@@ -51,7 +51,7 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
-      it 'メールアドレスがすでに登録しているユーザーと重複していると保存できない' do
+      it 'メールアドレスがすでに登録しているユーザーと重複していると登録できない' do
         @user.save
         another_user = FactoryBot.build(:user)
         another_user.email = @user.email
@@ -75,7 +75,7 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
-      it 'パスワード（確認含む）が5文字以下だと保存できない' do
+      it 'パスワード（確認含む）が5文字以下だと登録できない' do
         @user.password = 'ab123'
         @user.password_confirmation = 'ab123'
         @user.valid?
