@@ -67,7 +67,7 @@ RSpec.describe User, type: :model do
         @user.password = ''
         @user.password_confirmation = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードを入力してください','パスワードは英数字の混合である必要があります')
+        expect(@user.errors.full_messages).to include('パスワードを入力してください', 'パスワードは英数字の混合である必要があります')
       end
       it 'パスワードとパスワード(確認)が不一致では登録できない' do
         @user.password = 'abc123'
@@ -99,7 +99,7 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include('所属部署を入力してください')
       end
       it '生年月日が空では登録できない' do
-        @user.birthday= ''
+        @user.birthday = ''
         @user.valid?
         expect(@user.errors.full_messages).to include('生年月日を入力してください')
       end
