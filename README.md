@@ -5,7 +5,7 @@
 - 営業先の顧客情報と商談記録の作成・管理ができます。
 
 # URL
-- https://dailyreport-41465.onrender.com
+- https://dailyreport-41465-1.onrender.com
 
 # テスト用アカウント
 - メール：test1@test.com
@@ -87,11 +87,7 @@
 - JavaScript
 - MySQL 8.0
 
-# ローカルでの動作方法
-% git clone https://github.com/pickles0417/dailyreport-41465.git<br>
-% cd dailyreport-41465<br>
-% yarn<br>
-% yarn dev<br>
+
 
 # 工夫した点
 利用時のシチュエーションをイメージし、使いやすさ・シンプルさに重点を置き、画面遷移やメニュー、ボタンの工夫を行いました。
