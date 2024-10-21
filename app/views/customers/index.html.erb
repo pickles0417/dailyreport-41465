@@ -1,6 +1,8 @@
 <%= render "shared/header" %>
-<% if @customer.nil? || @customer.empty? %>
-  <div class="customer-none-title"><%= "現在、顧客情報はありません。"%></div>
+<% if @customer.blank? %>
+  <div class="customer-none-contents">
+    <div class="customer-none-title"><%= "現在、顧客情報はありません。"%></div>
+  </div>
 <% else %>
   <div class="index-customer-title">顧客一覧</div>
   <div class="flex-table">
